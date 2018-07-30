@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+ <html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Fruit Cart</title>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   <meta name="robots" content="all"/>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta property="og:image" content="http://placehold.it/100x100" />
+   <meta property="og:title" content="" />
+   <meta property="og:description" content="" /> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
+    <link href="~/Content/css/ico/pixedenico/Pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="~/Content/css/ico/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/js/arcticmodal/jquery.arcticmodal-0.3.css" rel="stylesheet" />
+    <link href="~/Content/css/main/animate.css" rel="stylesheet" />
+    
+    <link href="~/Content/css/main/style.css" rel="stylesheet" />
+    <link href="~/Content/css/typography/OpenSans.css" rel="stylesheet" />
+    <link href="~/Content/css/main/theme-main.css" rel="stylesheet" />
+    <link href="~/Content/css/user.css" rel="stylesheet" />
+    
+
+
+
+   
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body id="body">
+    <div>
+        <section class="bg-color--white-2 padding-null bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
+				<h2><span style="color:blue">Fruit Center</span></h2>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12 text-right text-left-xs">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<a style="color:green" href="mail:">www.fruitcenter.com</a>
+                <i  class="fa fa-phone" style="color:green"></i>
+				<a style="color:green" href="tel:" class="text--nowrap">725-637-5464</a>
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+				<a style="color:green" href="#" class="text--nowrap">Chennai<a></a>
+			</div>
+		</div>
+	</div>
+	</section>
+	<nav class="hr bg-color--white-2">
+		<div class="container">
+
+			<div class="row row--nav row--nav--baseline">
+				
+				
+				<div class="nav-mod-group right left-xs left-sm left-xs">
+
+                    <div class="nav-mod search hidden-xs">
+                        <div id="reg">
+                            Register</div>
+                        
+                    </div>
+                    <div class="nav-mod search hidden-xs">
+					 <div class="register">Login</div>
+                   </div>
+					
+					<div class="nav-mod  dropdown dropdown--right dropdown--toggle-on-click dropdown--left-sm">
+						<h2><i class="material-icons dropdown__toggle">&#xE8CC;</i></h2>
+						<div class="dropdown__content dropdown__content--2 bg-color--white">
+								<div class="row hr">
+									<div class="col-md-3 col-sm-3 col-xs-3 text-center">
+										<img alt="" src="images/items/thumb-item%234.png" height="40">
+									</div>
+									<div class="col-md-8 col-sm-8 col-xs-8">
+										<b class="text--uppercase">Bag<span class="right">4</span></b>
+										<p class="p-xs marg-null">Gray, Orange</p>
+									</div>
+									<div class="col-md-1 col-sm-1 col-xs-1 text-right">
+										<i class="material-icons ico-xs">&#xE14C;</i>
+									</div>
+								</div>
+								<div class="row hr">
+									<div class="col-md-3 col-sm-3 col-xs-3 text-center">
+										<img alt="" src="images/items/thumb-item%237.png" height="40">
+									</div>
+									<div class="col-md-8 col-sm-8 col-xs-8">
+										<b class="text--uppercase">Sport bag<span class="right">1</span></b>
+										<p class="p-xs marg-null">Black, Orange</p>
+									</div>
+									<div class="col-md-1 col-sm-1 col-xs-1 text-right">
+										<i class="material-icons ico-xs">&#xE14C;</i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<a href="#" class="btn btn-md btn--line">Cart</a>
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<b class="price__label">CART TOTAL</b><br>
+										<span class="price price-xs">2.000$</span>
+									</div>
+								</div>
+							</div>
+					</div>
+					<div data-include="mod-buttons"></div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+        @RenderBody()
+        @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function () {     
+      $('#reg').click(function (e)      {
+          location.href = '@Url.Content("~/User/Register/")';
+      });
+    });
+</script>
+</body>
+</html>

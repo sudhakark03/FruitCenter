@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73C3B033-09DD-4E17-B762-DB592B2F51A6}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo</RootNamespace>
+    <AssemblyName>Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Content\Style11.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyDatabaseEntries.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Imagetobase.cs" />
+    <Compile Include="Migrations\201807091105082_dpttable.cs" />
+    <Compile Include="Migrations\201807091105082_dpttable.Designer.cs">
+      <DependentUpon>201807091105082_dpttable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807251040553_fruit.cs" />
+    <Compile Include="Migrations\201807251040553_fruit.Designer.cs">
+      <DependentUpon>201807251040553_fruit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807251050324_dropimage.cs" />
+    <Compile Include="Migrations\201807251050324_dropimage.Designer.cs">
+      <DependentUpon>201807251050324_dropimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807251236209_addimage.cs" />
+    <Compile Include="Migrations\201807251236209_addimage.Designer.cs">
+      <DependentUpon>201807251236209_addimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807251243403_adddatatype.cs" />
+    <Compile Include="Migrations\201807251243403_adddatatype.Designer.cs">
+      <DependentUpon>201807251243403_adddatatype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807261446289_abc.cs" />
+    <Compile Include="Migrations\201807261446289_abc.Designer.cs">
+      <DependentUpon>201807261446289_abc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DtpDbContext.cs" />
+    <Compile Include="Models\Fruit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\css\ico\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\css\ico\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\css\ico\pixedenico\helper.css" />
+    <Content Include="Content\css\ico\pixedenico\Pe-icon-7-stroke.css" />
+    <Content Include="Content\css\ico\pixedenico\Pe-icon-7-stroke.svg" />
+    <Content Include="Content\css\main\animate.css" />
+    <Content Include="Content\css\main\rtl.css" />
+    <Content Include="Content\css\main\style.css" />
+    <Content Include="Content\css\main\theme-blue-grey.css" />
+    <Content Include="Content\css\main\theme-blue.css" />
+    <Content Include="Content\css\main\theme-dark.css" />
+    <Content Include="Content\css\main\theme-deep-purple.css" />
+    <Content Include="Content\css\main\theme-desert.css" />
+    <Content Include="Content\css\main\theme-main.css" />
+    <Content Include="Content\css\main\theme-mint.css" />
+    <Content Include="Content\css\main\theme-orange.css" />
+    <Content Include="Content\css\main\theme-purple.css" />
+    <Content Include="Content\css\main\theme-red.css" />
+    <Content Include="Content\css\typography\ArimaMadurai.css" />
+    <Content Include="Content\css\typography\Droid.css" />
+    <Content Include="Content\css\typography\OpenSans.css" />
+    <Content Include="Content\css\typography\Raleway.css" />
+    <Content Include="Content\css\typography\Roboto.css" />
+    <Content Include="Content\css\typography\Rosa.css" />
+    <Content Include="Content\css\user.css" />
+    <Content Include="Content\js\animate.js" />
+    <Content Include="Content\js\arcticmodal\jquery.arcticmodal-0.3.css" />
+    <Content Include="Content\js\arcticmodal\jquery.arcticmodal-0.3.min.js" />
+    <Content Include="Content\js\arcticmodal\loading.gif" />
+    <Content Include="Content\js\arcticmodal\themes\dark.css" />
+    <Content Include="Content\js\arcticmodal\themes\simple.css" />
+    <Content Include="Content\js\countdown-master\dest\countdown.js" />
+    <Content Include="Content\js\countdown-master\dest\countdown.min.js" />
+    <Content Include="Content\js\countdown-master\dest\jquery.countdown.js" />
+    <Content Include="Content\js\countdown-master\dest\jquery.countdown.min.js" />
+    <Content Include="Content\js\countdown-master\examples\index.html" />
+    <Content Include="Content\js\countdown-master\examples\style.css" />
+    <Content Include="Content\js\countdown-master\src\countdown.js" />
+    <Content Include="Content\js\countdown-master\src\jquery-wrapper.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\changelog.txt" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\basic-carousel.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\carousel-min-max.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\css\demo.css" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\dynamic-carousel-min-max.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-medium\svg\1110FC_0.svg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-medium\svg\svg_test.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-regular\svg\11014B_0.svg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-regular\svg\svg_test.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-semibold\svg\index.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-semibold\svg\style_169898.svg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\images\kitchen_adventurer_caramel.jpg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\images\kitchen_adventurer_cheesecake_brownie.jpg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\images\kitchen_adventurer_donut.jpg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\images\kitchen_adventurer_lemon.jpg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\images\logo.png" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\index.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\demo.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\froogaloop.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\jquery.easing.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\jquery.fitvid.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\jquery.mousewheel.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\modernizr.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\shBrushCss.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\shBrushJScript.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\shBrushXml.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\js\shCore.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\multiple-carousel-destroy.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\thumbnail-controlnav.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\thumbnail-slider.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\video-wistia.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\video.html" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\flexslider.css" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\fonts\flexslider-icon.svg" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\images\bg_play_pause.png" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\jquery.flexslider-min.js" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\jquery.flexslider.js" />
+    <Content Include="Content\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Content\js\instafeed.js" />
+    <Content Include="Content\js\jquery-git.min.js" />
+    <Content Include="Content\js\jquery.mb.YTPlayer.min.js" />
+    <Content Include="Content\js\jquery.mobile-git.min.js" />
+    <Content Include="Content\js\jquery.mobile.custom\jquery.mobile.custom.js" />
+    <Content Include="Content\js\jquery.mobile.custom\jquery.mobile.custom.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\masonry.pkgd.min.js" />
+    <Content Include="Content\js\mixitup.js" />
+    <Content Include="Content\js\picker\legacy.js" />
+    <Content Include="Content\js\picker\picker.date.js" />
+    <Content Include="Content\js\picker\picker.js" />
+    <Content Include="Content\js\picker\picker.time.js" />
+    <Content Include="Content\js\picker\themes\classic.css" />
+    <Content Include="Content\js\picker\themes\classic.date.css" />
+    <Content Include="Content\js\picker\themes\classic.time.css" />
+    <Content Include="Content\js\picker\themes\default.css" />
+    <Content Include="Content\js\picker\themes\default.date.css" />
+    <Content Include="Content\js\picker\themes\default.time.css" />
+    <Content Include="Content\js\picker\themes\rtl.css" />
+    <Content Include="Content\js\picker\translations\ar.js" />
+    <Content Include="Content\js\picker\translations\bg_BG.js" />
+    <Content Include="Content\js\picker\translations\bs_BA.js" />
+    <Content Include="Content\js\picker\translations\ca_ES.js" />
+    <Content Include="Content\js\picker\translations\cs_CZ.js" />
+    <Content Include="Content\js\picker\translations\da_DK.js" />
+    <Content Include="Content\js\picker\translations\de_DE.js" />
+    <Content Include="Content\js\picker\translations\el_GR.js" />
+    <Content Include="Content\js\picker\translations\es_ES.js" />
+    <Content Include="Content\js\picker\translations\et_EE.js" />
+    <Content Include="Content\js\picker\translations\eu_ES.js" />
+    <Content Include="Content\js\picker\translations\fa_IR.js" />
+    <Content Include="Content\js\picker\translations\fi_FI.js" />
+    <Content Include="Content\js\picker\translations\fr_FR.js" />
+    <Content Include="Content\js\picker\translations\gl_ES.js" />
+    <Content Include="Content\js\picker\translations\he_IL.js" />
+    <Content Include="Content\js\picker\translations\hi_IN.js" />
+    <Content Include="Content\js\picker\translations\hr_HR.js" />
+    <Content Include="Content\js\picker\translations\hu_HU.js" />
+    <Content Include="Content\js\picker\translations\id_ID.js" />
+    <Content Include="Content\js\picker\translations\is_IS.js" />
+    <Content Include="Content\js\picker\translations\it_IT.js" />
+    <Content Include="Content\js\picker\translations\ja_JP.js" />
+    <Content Include="Content\js\picker\translations\ko_KR.js" />
+    <Content Include="Content\js\picker\translations\lt_LT.js" />
+    <Content Include="Content\js\picker\translations\lv_LV.js" />
+    <Content Include="Content\js\picker\translations\nb_NO.js" />
+    <Content Include="Content\js\picker\translations\ne_NP.js" />
+    <Content Include="Content\js\picker\translations\nl_NL.js" />
+    <Content Include="Content\js\picker\translations\no_NO.js" />
+    <Content Include="Content\js\picker\translations\pl_PL.js" />
+    <Content Include="Content\js\picker\translations\pt_BR.js" />
+    <Content Include="Content\js\picker\translations\pt_PT.js" />
+    <Content Include="Content\js\picker\translations\ro_RO.js" />
+    <Content Include="Content\js\picker\translations\ru_RU.js" />
+    <Content Include="Content\js\picker\translations\sk_SK.js" />
+    <Content Include="Content\js\picker\translations\sl_SI.js" />
+    <Content Include="Content\js\picker\translations\sv_SE.js" />
+    <Content Include="Content\js\picker\translations\th_TH.js" />
+    <Content Include="Content\js\picker\translations\tr_TR.js" />
+    <Content Include="Content\js\picker\translations\uk_UA.js" />
+    <Content Include="Content\js\picker\translations\vi_VN.js" />
+    <Content Include="Content\js\picker\translations\zh_CN.js" />
+    <Content Include="Content\js\picker\translations\zh_TW.js" />
+    <Content Include="Content\js\placeholder\placeholder.js" />
+    <Content Include="Content\js\prismjs\prism.css" />
+    <Content Include="Content\js\prismjs\prism.js" />
+    <Content Include="Content\js\typed.js" />
+    <Content Include="Content\js\user.js" />
+    <Content Include="Content\js\waypoints.js" />
+    <Content Include="Content\StyleSheet2.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\css\ico\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\css\ico\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\css\ico\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\css\ico\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\css\ico\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\css\ico\pixedenico\Pe-icon-7-stroke.eot" />
+    <Content Include="Content\css\ico\pixedenico\Pe-icon-7-stroke.ttf" />
+    <Content Include="Content\css\ico\pixedenico\Pe-icon-7-stroke.woff" />
+    <Content Include="Content\js\countdown-master\.gitignore" />
+    <Content Include="Content\js\countdown-master\bower.json" />
+    <Content Include="Content\js\countdown-master\package.json" />
+    <Content Include="Content\js\countdown-master\Readme.md" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-medium\eot\1110FC_0.eot" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-medium\ttf\1110FC_0.ttf" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-medium\woff\1110FC_0.woff" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-regular\eot\11014B_0.eot" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-regular\ttf\11014B_0.ttf" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-regular\woff\11014B_0.woff" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-semibold\eot\style_169898.eot" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-semibold\ttf\style_169898.ttf" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\demo\fonts\webfonts\geo-semibold\woff\style_169898.woff" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\fonts\flexslider-icon.eot" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\fonts\flexslider-icon.woff" />
+    <Content Include="Content\js\FlexSlider-release-2-2-0\README.mdown" />
+    <Content Include="Images\images\.DS_Store" />
+    <Content Include="Images\images\items\.DS_Store" />
+    <Content Include="Content\bootstrap\config.json" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\Apple.jpg" />
+    <Content Include="Images\Banana.jpg" />
+    <Content Include="Images\images\doc\context-menu.png" />
+    <Content Include="Images\images\doc\inline-edit.png" />
+    <Content Include="Images\images\doc\pages-create.png" />
+    <Content Include="Images\images\doc\pages-save.png" />
+    <Content Include="Images\images\doc\pages-select.png" />
+    <Content Include="Images\images\doc\root-folder.png" />
+    <Content Include="Images\images\doc\sidebar-pages.png" />
+    <Content Include="Images\images\doc\sidebar-sections.png" />
+    <Content Include="Images\images\doc\sidebar-settings.png" />
+    <Content Include="Images\images\doc\Thumbnail.png" />
+    <Content Include="Images\images\doc\toolbar.png" />
+    <Content Include="Images\images\hi\03smvju9pjo-breather.jpg" />
+    <Content Include="Images\images\hi\17oxkythypo-arnaud-mesureur.jpg" />
+    <Content Include="Images\images\hi\1ouglrchsby-christoffer-engstrom.jpg" />
+    <Content Include="Images\images\hi\2rm8p0rkxiw-marius-masalar.jpg" />
+    <Content Include="Images\images\hi\3k5camxjxl4-nx-vision.jpg" />
+    <Content Include="Images\images\hi\4edbe81usy0-roya-ann-miller.jpg" />
+    <Content Include="Images\images\hi\4uojmedcwi8-tim-bogdanov.jpg" />
+    <Content Include="Images\images\hi\71goktqo_hs-william-recinos.jpg" />
+    <Content Include="Images\images\hi\7fou7gculr4-denys-nevozhai.jpg" />
+    <Content Include="Images\images\hi\8tegvuu6cso-lee-campbell.jpg" />
+    <Content Include="Images\images\hi\90zp9h6mamw-annie-spratt.jpg" />
+    <Content Include="Images\images\hi\98elr-livd8-zachary-nelson.jpg" />
+    <Content Include="Images\images\hi\9l_326fiszk-luca-bravo.jpg" />
+    <Content Include="Images\images\hi\aapsemzfsok-alexandre-chambon.jpg" />
+    <Content Include="Images\images\hi\aaron-burson-243516.jpg" />
+    <Content Include="Images\images\hi\abdullah-oguk-256739.jpg" />
+    <Content Include="Images\images\hi\adi-constantin-85028.jpg" />
+    <Content Include="Images\images\hi\alesia-kazantceva-247053.jpg" />
+    <Content Include="Images\images\hi\alesia-kazantceva-248134.jpg" />
+    <Content Include="Images\images\hi\alesia-kazantceva-254885.jpg" />
+    <Content Include="Images\images\hi\alessio-lin-221337.jpg" />
+    <Content Include="Images\images\hi\alif-korsem-243373.jpg" />
+    <Content Include="Images\images\hi\allef-vinicius-227743.jpg" />
+    <Content Include="Images\images\hi\andre-hunter-235158 %281%29.jpg" />
+    <Content Include="Images\images\hi\andrew-neel-218073.jpg" />
+    <Content Include="Images\images\hi\andrew-neel-237802.jpg" />
+    <Content Include="Images\images\hi\annie-liao-221718.jpg" />
+    <Content Include="Images\images\hi\annie-spratt-167089.jpg" />
+    <Content Include="Images\images\hi\annie-spratt-216506.jpg" />
+    <Content Include="Images\images\hi\aremq4skhpa-tamara-bellis.jpg" />
+    <Content Include="Images\images\hi\ashim-d-silva-80530.jpg" />
+    <Content Include="Images\images\hi\autri-taheri-210905.jpg" />
+    <Content Include="Images\images\hi\autumn-goodman-242810.jpg" />
+    <Content Include="Images\images\hi\autumn-goodman-242816.jpg" />
+    <Content Include="Images\images\hi\autumn-goodman-242825.jpg" />
+    <Content Include="Images\images\hi\aziz-acharki-253909.jpg" />
+    <Content Include="Images\images\hi\b4dffp4ja3q-tyson-dudley.jpg" />
+    <Content Include="Images\images\hi\bcle7rexflm-toa-heftiba.jpg" />
+    <Content Include="Images\images\hi\ben-white-226176.jpg" />
+    <Content Include="Images\images\hi\bewakoof-com-official-215985.jpg" />
+    <Content Include="Images\images\hi\bhr_5rwkprk-tamara-bellis.jpg" />
+    <Content Include="Images\images\hi\blake-richard-verdoorn-18687.jpg" />
+    <Content Include="Images\images\hi\bn6zncg-5u8-lee-campbell.jpg" />
+    <Content Include="Images\images\hi\bonjbu19iiy-brooke-cagle.jpg" />
+    <Content Include="Images\images\hi\brad-neathery-248309.jpg" />
+    <Content Include="Images\images\hi\brad-neathery-258926.jpg" />
+    <Content Include="Images\images\hi\brigitte-tohm-254366.jpg" />
+    <Content Include="Images\images\hi\brigitte-tohm-254381.jpg" />
+    <Content Include="Images\images\hi\brooke-cagle-193472.jpg" />
+    <Content Include="Images\images\hi\brooke-lark-200708.jpg" />
+    <Content Include="Images\images\hi\bwdrpdr-ahu-allef-vinicius.jpg" />
+    <Content Include="Images\images\hi\c1j_esgnpt0-christopher-burns.jpg" />
+    <Content Include="Images\images\hi\c2famnqacde-mc-jefferson-agloro.jpg" />
+    <Content Include="Images\images\hi\caitlyn-wilson-230614.jpg" />
+    <Content Include="Images\images\hi\cathal-mac-an-bheatha-221498.jpg" />
+    <Content Include="Images\images\hi\chris-barbalis-178734.jpg" />
+    <Content Include="Images\images\hi\chris-barbalis-249239.jpg" />
+    <Content Include="Images\images\hi\chris-barbalis-249277.jpg" />
+    <Content Include="Images\images\hi\christine-siracusa-238375.jpg" />
+    <Content Include="Images\images\hi\christoph-schulz-222340.jpg" />
+    <Content Include="Images\images\hi\cnpwwzoske4-tamara-bellis.jpg" />
+    <Content Include="Images\images\hi\colin-cassidy-256355.jpg" />
+    <Content Include="Images\images\hi\corinne-kutz-157311.jpg" />
+    <Content Include="Images\images\hi\corinne-kutz-211251.jpg" />
+    <Content Include="Images\images\hi\cpudivqtrjg-breather.jpg" />
+    <Content Include="Images\images\hi\crown-labs-agency-222313.jpg" />
+    <Content Include="Images\images\hi\cta7f7bwt5o-serge-esteve.jpg" />
+    <Content Include="Images\images\hi\dan-gold-218878.jpg" />
+    <Content Include="Images\images\hi\dan-gold-218879.jpg" />
+    <Content Include="Images\images\hi\daniel-tseng-240610.jpg" />
+    <Content Include="Images\images\hi\david-hellmann-256150.jpg" />
+    <Content Include="Images\images\hi\david-lezcano-211888.jpg" />
+    <Content Include="Images\images\hi\davide-cantelli-148407.jpg" />
+    <Content Include="Images\images\hi\davide-cantelli-240809.jpg" />
+    <Content Include="Images\images\hi\diego-hernandez-219543.jpg" />
+    <Content Include="Images\images\hi\diego-hernandez-220886.jpg" />
+    <Content Include="Images\images\hi\diego-hernandez-221800.jpg" />
+    <Content Include="Images\images\hi\diego-hernandez-222506.jpg" />
+    <Content Include="Images\images\hi\dimi-katsavaris-222748.jpg" />
+    <Content Include="Images\images\hi\dwheufds6kq-joshua-earle.jpg" />
+    <Content Include="Images\images\hi\dzd_o5cnr0y-jasper-guy.jpg" />
+    <Content Include="Images\images\hi\edwin-andrade-158050.jpg" />
+    <Content Include="Images\images\hi\elli-o-212646.jpg" />
+    <Content Include="Images\images\hi\enrico-carcasci-236917.jpg" />
+    <Content Include="Images\images\hi\eytonl4st9k-matt-heaton.jpg" />
+    <Content Include="Images\images\hi\fbanijhrol4-annie-spratt.jpg" />
+    <Content Include="Images\images\hi\fgajaiwsu60-sandro-georgi.jpg" />
+    <Content Include="Images\images\hi\filip-mroz-235735.jpg" />
+    <Content Include="Images\images\hi\fim-j1b_rc-bench-accounting.jpg" />
+    <Content Include="Images\images\hi\flaunter-com-237609 %281%29.jpg" />
+    <Content Include="Images\images\hi\flo-pappert-201009.jpg" />
+    <Content Include="Images\images\hi\geran-de-klerk-216686.jpg" />
+    <Content Include="Images\images\hi\geran-de-klerk-244231.jpg" />
+    <Content Include="Images\images\hi\gfkb3h8484g-jonathan-bean.jpg" />
+    <Content Include="Images\images\hi\gina-zee-97522.jpg" />
+    <Content Include="Images\images\hi\giulia-bertelli-116360.jpg" />
+    <Content Include="Images\images\hi\gl3b_ufuyd8-ian-baldwin.jpg" />
+    <Content Include="Images\images\hi\gupitdbdre4-sarah-dorweiler.jpg" />
+    <Content Include="Images\images\hi\gwerbzukm9c-scott-webb.jpg" />
+    <Content Include="Images\images\hi\gzb86hiu3za-ruel-calitis.jpg" />
+    <Content Include="Images\images\hi\harprit-bola-239056.jpg" />
+    <Content Include="Images\images\hi\hd756jmjjes-anthony-delanoix.jpg" />
+    <Content Include="Images\images\hi\henri-meilhac-155942.jpg" />
+    <Content Include="Images\images\hi\henri-meilhac-156026.jpg" />
+    <Content Include="Images\images\hi\hn_4k2diuws-jason-briscoe.jpg" />
+    <Content Include="Images\images\hi\hunter-johnson-222001.jpg" />
+    <Content Include="Images\images\hi\hunter-johnson-223002.jpg" />
+    <Content Include="Images\images\hi\hunter-johnson-226247.jpg" />
+    <Content Include="Images\images\hi\hun_nme5cis-sudiono-muji.jpg" />
+    <Content Include="Images\images\hi\hz1dvznmzvs-seth-doyle.jpg" />
+    <Content Include="Images\images\hi\i-m-priscilla-216787.jpg" />
+    <Content Include="Images\images\hi\ibrahim-kusuma-249416.jpg" />
+    <Content Include="Images\images\hi\igwnxx7paz4-michael-benz.jpg" />
+    <Content Include="Images\images\hi\imani-clovis-234736.jpg" />
+    <Content Include="Images\images\hi\iqbc4vu4ypq-ian-schneider.jpg" />
+    <Content Include="Images\images\hi\ir6yzbje9qa-breather.jpg" />
+    <Content Include="Images\images\hi\iwmornsvjr8-brandi-redd.jpg" />
+    <Content Include="Images\images\hi\ixeddfyn5cs-chinh-le-duc.jpg" />
+    <Content Include="Images\images\hi\jack-cairney-223226.jpg" />
+    <Content Include="Images\images\hi\jaroslaw-ceborski-250223.jpg" />
+    <Content Include="Images\images\hi\jason-briscoe-156653.jpg" />
+    <Content Include="Images\images\hi\jat2agxaneg-yuriy-kovalev.jpg" />
+    <Content Include="Images\images\hi\jaz-king-221367.jpg" />
+    <Content Include="Images\images\hi\jdn-_fiqb3k-all-bong.jpg" />
+    <Content Include="Images\images\hi\jeremy-bishop-226848.jpg" />
+    <Content Include="Images\images\hi\jessica-furtney-244839.jpg" />
+    <Content Include="Images\images\hi\jm8hucjtxb0-crew.jpg" />
+    <Content Include="Images\images\hi\joao-silas-226185.jpg" />
+    <Content Include="Images\images\hi\jon-asato-246165.jpg" />
+    <Content Include="Images\images\hi\jon-flobrant-230583.jpg" />
+    <Content Include="Images\images\hi\joseph-gonzalez-176749.jpg" />
+    <Content Include="Images\images\hi\joshua-earle-234343.jpg" />
+    <Content Include="Images\images\hi\justin-schuler-253611.jpg" />
+    <Content Include="Images\images\hi\kai-wang-234891.jpg" />
+    <Content Include="Images\images\hi\kari-shea-226157.jpg" />
+    <Content Include="Images\images\hi\kari-shea-254186.jpg" />
+    <Content Include="Images\images\hi\kb7szzdgm3o-tierra-benton.jpg" />
+    <Content Include="Images\images\hi\kodaavf7r50-john-towner.jpg" />
+    <Content Include="Images\images\hi\kpbg8bakjq4-crew.jpg" />
+    <Content Include="Images\images\hi\kquzjxvhcg-clem-onojeghuo.jpg" />
+    <Content Include="Images\images\hi\ky1x3qwntpk-simon-matzinger.jpg" />
+    <Content Include="Images\images\hi\larm-rmah-216854.jpg" />
+    <Content Include="Images\images\hi\lhtqjazuprq-breather.jpg" />
+    <Content Include="Images\images\hi\lolsb7m6xku-semenov-ivan.jpg" />
+    <Content Include="Images\images\hi\luca-bravo-210213.jpg" />
+    <Content Include="Images\images\hi\lydia-harper-252217.jpg" />
+    <Content Include="Images\images\hi\lydia-harper-252225.jpg" />
+    <Content Include="Images\images\hi\maarten-deckers-227224.jpg" />
+    <Content Include="Images\images\hi\marvin-meyer-242794.jpg" />
+    <Content Include="Images\images\hi\matt-cannon-248655.jpg" />
+    <Content Include="Images\images\hi\matthew-brodeur-215027.jpg" />
+    <Content Include="Images\images\hi\matthew-henry-173673.jpg" />
+    <Content Include="Images\images\hi\max-kramer-216296.jpg" />
+    <Content Include="Images\images\hi\mayra-carreno-62387.jpg" />
+    <Content Include="Images\images\hi\michael-browning-14090.jpg" />
+    <Content Include="Images\images\hi\michael-browning-227688.jpg" />
+    <Content Include="Images\images\hi\michael-dam-257088.jpg" />
+    <Content Include="Images\images\hi\mohamed-nohassi-242589.jpg" />
+    <Content Include="Images\images\hi\mp0bgas_d1c-naomi-hebert.jpg" />
+    <Content Include="Images\images\hi\muhammad-raufan-yusup-257289.jpg" />
+    <Content Include="Images\images\hi\ndwjflxfsn4-billy-chester.jpg" />
+    <Content Include="Images\images\hi\nik-macmillan-151041.jpg" />
+    <Content Include="Images\images\hi\nnjzglwhjho-atikh-bana.jpg" />
+    <Content Include="Images\images\hi\nordwood-themes-180852.jpg" />
+    <Content Include="Images\images\hi\nvj-pdu98wu-aidan-meyer.jpg" />
+    <Content Include="Images\images\hi\nx-vision-243224.jpg" />
+    <Content Include="Images\images\hi\o9vkzmu05l0-cole-hutson.jpg" />
+    <Content Include="Images\images\hi\octavian-rosca-216455.jpg" />
+    <Content Include="Images\images\hi\oipwvziap0o-jakob-owens.jpg" />
+    <Content Include="Images\images\hi\oliver-cole-236264 %281%29.jpg" />
+    <Content Include="Images\images\hi\oqtl_mhd2ik-patrick-baum.jpg" />
+    <Content Include="Images\images\hi\pablo-heimplatz-243286.jpg" />
+    <Content Include="Images\images\hi\pablo-heimplatz-243301.jpg" />
+    <Content Include="Images\images\hi\park-troopers-221403.jpg" />
+    <Content Include="Images\images\hi\paulette-wooten-223048.jpg" />
+    <Content Include="Images\images\hi\peter-winckler-244451.jpg" />
+    <Content Include="Images\images\hi\pexels-photo-310419.jpeg" />
+    <Content Include="Images\images\hi\phigyugqpvu-bruno-nascimento.jpg" />
+    <Content Include="Images\images\hi\ql-qrylmd0y-seth-doyle.jpg" />
+    <Content Include="Images\images\hi\qnpesem_t4i-lee-campbell.jpg" />
+    <Content Include="Images\images\hi\qxcqkbf7tuc-jean-pierre-brungs.jpg" />
+    <Content Include="Images\images\hi\rawpixel-com-247358.jpg" />
+    <Content Include="Images\images\hi\rawpixel-com-252127.jpg" />
+    <Content Include="Images\images\hi\ricardo-gomez-angel-255073.jpg" />
+    <Content Include="Images\images\hi\rju_xd3tgyc-breather.jpg" />
+    <Content Include="Images\images\hi\rktkn-111844.jpg" />
+    <Content Include="Images\images\hi\roman-bozhko-251947.jpg" />
+    <Content Include="Images\images\hi\roman-kraft-197672.jpg" />
+    <Content Include="Images\images\hi\ross-sokolovski-209827.jpg" />
+    <Content Include="Images\images\hi\ruthson-zimmerman-233520 %281%29.jpg" />
+    <Content Include="Images\images\hi\r_-m00daj2y-chelsea-ferenando.jpg" />
+    <Content Include="Images\images\hi\samuel-fyfe-251960.jpg" />
+    <Content Include="Images\images\hi\sandro-katalina-219649.jpg" />
+    <Content Include="Images\images\hi\sarah-dorweiler-105892.jpg" />
+    <Content Include="Images\images\hi\scott-webb-193068.jpg" />
+    <Content Include="Images\images\hi\sean-afnan-244576.jpg" />
+    <Content Include="Images\images\hi\sergey-pesterev-223092.jpg" />
+    <Content Include="Images\images\hi\slxbemvneqi-meiying-ng.jpg" />
+    <Content Include="Images\images\hi\spencer-kaff-240377.jpg" />
+    <Content Include="Images\images\hi\stil-243522.jpg" />
+    <Content Include="Images\images\hi\stil-243534.jpg" />
+    <Content Include="Images\images\hi\StockSnap_0C4LLJWEEU.jpg" />
+    <Content Include="Images\images\hi\StockSnap_0J308RAF8H.jpg" />
+    <Content Include="Images\images\hi\StockSnap_1LW59GG0WK.jpg" />
+    <Content Include="Images\images\hi\StockSnap_73EV0ODLNO.jpg" />
+    <Content Include="Images\images\hi\StockSnap_8WBXU5EZF1.jpg" />
+    <Content Include="Images\images\hi\StockSnap_ESWYC8C34O.jpg" />
+    <Content Include="Images\images\hi\StockSnap_FEEDD7P7H2.jpg" />
+    <Content Include="Images\images\hi\StockSnap_G47QDAYCTO.jpg" />
+    <Content Include="Images\images\hi\StockSnap_K9Y044YEMY.jpg" />
+    <Content Include="Images\images\hi\StockSnap_LEY5GM8R4U.jpg" />
+    <Content Include="Images\images\hi\StockSnap_MSISRLA1IU.jpg" />
+    <Content Include="Images\images\hi\StockSnap_RQ2JLHTFHD.jpg" />
+    <Content Include="Images\images\hi\swbzwmuutjm-crew.jpg" />
+    <Content Include="Images\images\hi\tev1676vwja-ron-sartini.jpg" />
+    <Content Include="Images\images\hi\tg36rvceqng-rob-bye.jpg" />
+    <Content Include="Images\images\hi\the-5th-141680.jpg" />
+    <Content Include="Images\images\hi\tim-mossholder-244857.jpg" />
+    <Content Include="Images\images\hi\toa-heftiba-134565.jpg" />
+    <Content Include="Images\images\hi\toa-heftiba-257395.jpg" />
+    <Content Include="Images\images\hi\tommy-lisbin-252905.jpg" />
+    <Content Include="Images\images\hi\tpkqwyhy8q4-aneta-ivanova.jpg" />
+    <Content Include="Images\images\hi\tpv9dh822va-stefan-stefancik.jpg" />
+    <Content Include="Images\images\hi\u2ymajzuqfk-tamara-bellis.jpg" />
+    <Content Include="Images\images\hi\ubixxuy7fg0-nick-nice.jpg" />
+    <Content Include="Images\images\hi\uj8lnvcbjfq-seth-doyle.jpg" />
+    <Content Include="Images\images\hi\usc6z5ajevm-richie-lugo.jpg" />
+    <Content Include="Images\images\hi\verena-yunita-yapi-253388.jpg" />
+    <Content Include="Images\images\hi\vitaliy-paykov-212215.jpg" />
+    <Content Include="Images\images\hi\vladislav-klapin-221352.jpg" />
+    <Content Include="Images\images\hi\voxdu8gis6g-breather.jpg" />
+    <Content Include="Images\images\hi\vr_fijvnqcy-inna-lesyk.jpg" />
+    <Content Include="Images\images\hi\w4ruhiw3pd0-andrew-coelho.jpg" />
+    <Content Include="Images\images\hi\w5ybfiiuauo-ambreen-hasan.jpg" />
+    <Content Include="Images\images\hi\weyamle9fdm-ashim-d-silva.jpg" />
+    <Content Include="Images\images\hi\wfk8olclc7k-christos-barbalis.jpg" />
+    <Content Include="Images\images\hi\wi5pncoffn4-priscilla-flores.jpg" />
+    <Content Include="Images\images\hi\william-stitt-111010.jpg" />
+    <Content Include="Images\images\hi\willspirit-sbln-226116.jpg" />
+    <Content Include="Images\images\hi\wteo1tlenqw-jeremy-bishop.jpg" />
+    <Content Include="Images\images\hi\xgt3iqdiiju-elijah-henderson.jpg" />
+    <Content Include="Images\images\hi\xi9d8yslno4-rawpixel-com.jpg" />
+    <Content Include="Images\images\hi\xyvoh2ng_3k-braden-barwich.jpg" />
+    <Content Include="Images\images\hi\yingchou-han-241463.jpg" />
+    <Content Include="Images\images\hi\y_jdydxopi0-breather.jpg" />
+    <Content Include="Images\images\hi\z1l6vcqlzgc-nick-karvounis.jpg" />
+    <Content Include="Images\images\hi\zhp6jnixtfq-jez-timms.jpg" />
+    <Content Include="Images\images\hi\zkpiplfdia0-chloe-smith.jpg" />
+    <Content Include="Images\images\hi\zlzlx5szccs-brigitta-schneiter.jpg" />
+    <Content Include="Images\images\items\interior2.png" />
+    <Content Include="Images\images\items\item#1.png" />
+    <Content Include="Images\images\items\item#2.png" />
+    <Content Include="Images\images\items\item#3.png" />
+    <Content Include="Images\images\items\item#4.png" />
+    <Content Include="Images\images\items\item#5.png" />
+    <Content Include="Images\images\items\item#6.png" />
+    <Content Include="Images\images\items\item#7.png" />
+    <Content Include="Images\images\items\item#8.png" />
+    <Content Include="Images\images\items\kit1.png" />
+    <Content Include="Images\images\items\kit2.png" />
+    <Content Include="Images\images\items\kit3.png" />
+    <Content Include="Images\images\items\kit4.png" />
+    <Content Include="Images\images\items\kit5.png" />
+    <Content Include="Images\images\items\kit6.png" />
+    <Content Include="Images\images\items\kit7.png" />
+    <Content Include="Images\images\items\kit8.png" />
+    <Content Include="Images\images\items\kitCard1.png" />
+    <Content Include="Images\images\items\kitCard2.png" />
+    <Content Include="Images\images\items\kitCard3.png" />
+    <Content Include="Images\images\items\screen1.png" />
+    <Content Include="Images\images\items\screen2.png" />
+    <Content Include="Images\images\items\screen3.png" />
+    <Content Include="Images\images\items\screen4.png" />
+    <Content Include="Images\images\items\screen5.png" />
+    <Content Include="Images\images\items\screen6.png" />
+    <Content Include="Images\images\items\screen7.png" />
+    <Content Include="Images\images\items\screen8.png" />
+    <Content Include="Images\images\items\tablet.png" />
+    <Content Include="Images\images\items\thumb-item#4.png" />
+    <Content Include="Images\images\items\thumb-item#7.png" />
+    <Content Include="Images\images\logo--black.png" />
+    <Content Include="Images\images\logo--white.png" />
+    <Content Include="Images\images\low\03smvju9pjo-breather.jpg" />
+    <Content Include="Images\images\low\17oxkythypo-arnaud-mesureur.jpg" />
+    <Content Include="Images\images\low\1ouglrchsby-christoffer-engstrom.jpg" />
+    <Content Include="Images\images\low\2rm8p0rkxiw-marius-masalar.jpg" />
+    <Content Include="Images\images\low\3k5camxjxl4-nx-vision.jpg" />
+    <Content Include="Images\images\low\4edbe81usy0-roya-ann-miller.jpg" />
+    <Content Include="Images\images\low\4uojmedcwi8-tim-bogdanov.jpg" />
+    <Content Include="Images\images\low\71goktqo_hs-william-recinos.jpg" />
+    <Content Include="Images\images\low\7fou7gculr4-denys-nevozhai.jpg" />
+    <Content Include="Images\images\low\8tegvuu6cso-lee-campbell.jpg" />
+    <Content Include="Images\images\low\90zp9h6mamw-annie-spratt.jpg" />
+    <Content Include="Images\images\low\98elr-livd8-zachary-nelson.jpg" />
+    <Content Include="Images\images\low\9l_326fiszk-luca-bravo.jpg" />
+    <Content Include="Images\images\low\aapsemzfsok-alexandre-chambon.jpg" />
+    <Content Include="Images\images\low\aaron-burson-243516.jpg" />
+    <Content Include="Images\images\low\abdullah-oguk-256739.jpg" />
+    <Content Include="Images\images\low\adi-constantin-85028.jpg" />
+    <Content Include="Images\images\low\alesia-kazantceva-247053.jpg" />
+    <Content Include="Images\images\low\alesia-kazantceva-248134.jpg" />
+    <Content Include="Images\images\low\alesia-kazantceva-254885.jpg" />
+    <Content Include="Images\images\low\alessio-lin-221337.jpg" />
+    <Content Include="Images\images\low\alif-korsem-243373.jpg" />
+    <Content Include="Images\images\low\allef-vinicius-227743.jpg" />
+    <Content Include="Images\images\low\andre-hunter-235158 %281%29.jpg" />
+    <Content Include="Images\images\low\andrew-neel-218073.jpg" />
+    <Content Include="Images\images\low\andrew-neel-237802.jpg" />
+    <Content Include="Images\images\low\annie-liao-221718.jpg" />
+    <Content Include="Images\images\low\annie-spratt-167089.jpg" />
+    <Content Include="Images\images\low\annie-spratt-216506.jpg" />
+    <Content Include="Images\images\low\appstore.png" />
+    <Content Include="Images\images\low\aremq4skhpa-tamara-bellis.jpg" />
+    <Content Include="Images\images\low\ashim-d-silva-80530.jpg" />
+    <Content Include="Images\images\low\autri-taheri-210905.jpg" />
+    <Content Include="Images\images\low\autumn-goodman-242810.jpg" />
+    <Content Include="Images\images\low\autumn-goodman-242816.jpg" />
+    <Content Include="Images\images\low\autumn-goodman-242825.jpg" />
+    <Content Include="Images\images\low\aziz-acharki-253909.jpg" />
+    <Content Include="Images\images\low\b4dffp4ja3q-tyson-dudley.jpg" />
+    <Content Include="Images\images\low\bcle7rexflm-toa-heftiba.jpg" />
+    <Content Include="Images\images\low\ben-white-226176.jpg" />
+    <Content Include="Images\images\low\bewakoof-com-official-215985.jpg" />
+    <Content Include="Images\images\low\bhr_5rwkprk-tamara-bellis.jpg" />
+    <Content Include="Images\images\low\blake-richard-verdoorn-18687.jpg" />
+    <Content Include="Images\images\low\bn6zncg-5u8-lee-campbell.jpg" />
+    <Content Include="Images\images\low\bonjbu19iiy-brooke-cagle.jpg" />
+    <Content Include="Images\images\low\brad-neathery-248309.jpg" />
+    <Content Include="Images\images\low\brad-neathery-258926.jpg" />
+    <Content Include="Images\images\low\brigitte-tohm-254366.jpg" />
+    <Content Include="Images\images\low\brigitte-tohm-254381.jpg" />
+    <Content Include="Images\images\low\brooke-cagle-193472.jpg" />
+    <Content Include="Images\images\low\brooke-lark-200708.jpg" />
+    <Content Include="Images\images\low\browser-2.png" />
+    <Content Include="Images\images\low\browser.png" />
+    <Content Include="Images\images\low\bwdrpdr-ahu-allef-vinicius.jpg" />
+    <Content Include="Images\images\low\c1j_esgnpt0-christopher-burns.jpg" />
+    <Content Include="Images\images\low\c2famnqacde-mc-jefferson-agloro.jpg" />
+    <Content Include="Images\images\low\caitlyn-wilson-230614.jpg" />
+    <Content Include="Images\images\low\cathal-mac-an-bheatha-221498.jpg" />
+    <Content Include="Images\images\low\chris-barbalis-178734.jpg" />
+    <Content Include="Images\images\low\chris-barbalis-249239.jpg" />
+    <Content Include="Images\images\low\chris-barbalis-249277.jpg" />
+    <Content Include="Images\images\low\christine-siracusa-238375.jpg" />
+    <Content Include="Images\images\low\christoph-schulz-222340.jpg" />
+    <Content Include="Images\images\low\cnpwwzoske4-tamara-bellis.jpg" />
+    <Content Include="Images\images\low\colin-cassidy-256355.jpg" />
+    <Content Include="Images\images\low\corinne-kutz-157311.jpg" />
+    <Content Include="Images\images\low\corinne-kutz-211251.jpg" />
+    <Content Include="Images\images\low\cpudivqtrjg-breather.jpg" />
+    <Content Include="Images\images\low\crown-labs-agency-222313.jpg" />
+    <Content Include="Images\images\low\cta7f7bwt5o-serge-esteve.jpg" />
+    <Content Include="Images\images\low\dan-gold-218878.jpg" />
+    <Content Include="Images\images\low\dan-gold-218879.jpg" />
+    <Content Include="Images\images\low\daniel-tseng-240610.jpg" />
+    <Content Include="Images\images\low\david-hellmann-256150.jpg" />
+    <Content Include="Images\images\low\david-lezcano-211888.jpg" />
+    <Content Include="Images\images\low\davide-cantelli-148407.jpg" />
+    <Content Include="Images\images\low\davide-cantelli-240809.jpg" />
+    <Content Include="Images\images\low\diego-hernandez-219543.jpg" />
+    <Content Include="Images\images\low\diego-hernandez-220886.jpg" />
+    <Content Include="Images\images\low\diego-hernandez-221800.jpg" />
+    <Content Include="Images\images\low\diego-hernandez-222506.jpg" />
+    <Content Include="Images\images\low\dimi-katsavaris-222748.jpg" />
+    <Content Include="Images\images\low\dwheufds6kq-joshua-earle.jpg" />
+    <Content Include="Images\images\low\dzd_o5cnr0y-jasper-guy.jpg" />
+    <Content Include="Images\images\low\edwin-andrade-158050.jpg" />
+    <Content Include="Images\images\low\elli-o-212646.jpg" />
+    <Content Include="Images\images\low\enrico-carcasci-236917.jpg" />
+    <Content Include="Images\images\low\eytonl4st9k-matt-heaton.jpg" />
+    <Content Include="Images\images\low\fbanijhrol4-annie-spratt.jpg" />
+    <Content Include="Images\images\low\fgajaiwsu60-sandro-georgi.jpg" />
+    <Content Include="Images\images\low\filip-mroz-235735.jpg" />
+    <Content Include="Images\images\low\fim-j1b_rc-bench-accounting.jpg" />
+    <Content Include="Images\images\low\flaunter-com-237609 %281%29.jpg" />
+    <Content Include="Images\images\low\flo-pappert-201009.jpg" />
+    <Content Include="Images\images\low\geran-de-klerk-216686.jpg" />
+    <Content Include="Images\images\low\geran-de-klerk-244231.jpg" />
+    <Content Include="Images\images\low\gfkb3h8484g-jonathan-bean.jpg" />
+    <Content Include="Images\images\low\gina-zee-97522.jpg" />
+    <Content Include="Images\images\low\giulia-bertelli-116360.jpg" />
+    <Content Include="Images\images\low\gl3b_ufuyd8-ian-baldwin.jpg" />
+    <Content Include="Images\images\low\google-files.png" />
+    <Content Include="Images\images\low\google-play.png" />
+    <Content Include="Images\images\low\gupitdbdre4-sarah-dorweiler.jpg" />
+    <Content Include="Images\images\low\gwerbzukm9c-scott-webb.jpg" />
+    <Content Include="Images\images\low\gzb86hiu3za-ruel-calitis.jpg" />
+    <Content Include="Images\images\low\harprit-bola-239056.jpg" />
+    <Content Include="Images\images\low\hd756jmjjes-anthony-delanoix.jpg" />
+    <Content Include="Images\images\low\henri-meilhac-155942.jpg" />
+    <Content Include="Images\images\low\henri-meilhac-156026.jpg" />
+    <Content Include="Images\images\low\hn_4k2diuws-jason-briscoe.jpg" />
+    <Content Include="Images\images\low\hunter-johnson-222001.jpg" />
+    <Content Include="Images\images\low\hunter-johnson-223002.jpg" />
+    <Content Include="Images\images\low\hunter-johnson-226247.jpg" />
+    <Content Include="Images\images\low\hun_nme5cis-sudiono-muji.jpg" />
+    <Content Include="Images\images\low\hz1dvznmzvs-seth-doyle.jpg" />
+    <Content Include="Images\images\low\i-m-priscilla-216787.jpg" />
+    <Content Include="Images\images\low\ibrahim-kusuma-249416.jpg" />
+    <Content Include="Images\images\low\igwnxx7paz4-michael-benz.jpg" />
+    <Content Include="Images\images\low\imani-clovis-234736.jpg" />
+    <Content Include="Images\images\low\imani-clovis-234736.png" />
+    <Content Include="Images\images\low\iPad-transform45.png" />
+    <Content Include="Images\images\low\iPad-vert.png" />
+    <Content Include="Images\images\low\ipad.png" />
+    <Content Include="Images\images\low\iPhone-left.png" />
+    <Content Include="Images\images\low\iphone.png" />
+    <Content Include="Images\images\low\iqbc4vu4ypq-ian-schneider.jpg" />
+    <Content Include="Images\images\low\ir6yzbje9qa-breather.jpg" />
+    <Content Include="Images\images\low\iwmornsvjr8-brandi-redd.jpg" />
+    <Content Include="Images\images\low\ixeddfyn5cs-chinh-le-duc.jpg" />
+    <Content Include="Images\images\low\jack-cairney-223226.jpg" />
+    <Content Include="Images\images\low\jaroslaw-ceborski-250223.jpg" />
+    <Content Include="Images\images\low\jason-briscoe-156653.jpg" />
+    <Content Include="Images\images\low\jat2agxaneg-yuriy-kovalev.jpg" />
+    <Content Include="Images\images\low\jaz-king-221367.jpg" />
+    <Content Include="Images\images\low\jdn-_fiqb3k-all-bong.jpg" />
+    <Content Include="Images\images\low\jeremy-bishop-226848.jpg" />
+    <Content Include="Images\images\low\jessica-furtney-244839.jpg" />
+    <Content Include="Images\images\low\jm8hucjtxb0-crew.jpg" />
+    <Content Include="Images\images\low\joao-silas-226185.jpg" />
+    <Content Include="Images\images\low\jon-asato-246165.jpg" />
+    <Content Include="Images\images\low\jon-flobrant-230583.jpg" />
+    <Content Include="Images\images\low\joseph-gonzalez-176749.jpg" />
+    <Content Include="Images\images\low\joshua-earle-234343.jpg" />
+    <Content Include="Images\images\low\justin-schuler-253611.jpg" />
+    <Content Include="Images\images\low\kai-wang-234891.jpg" />
+    <Content Include="Images\images\low\kari-shea-226157.jpg" />
+    <Content Include="Images\images\low\kari-shea-254186.jpg" />
+    <Content Include="Images\images\low\kb7szzdgm3o-tierra-benton.jpg" />
+    <Content Include="Images\images\low\kodaavf7r50-john-towner.jpg" />
+    <Content Include="Images\images\low\kpbg8bakjq4-crew.jpg" />
+    <Content Include="Images\images\low\kquzjxvhcg-clem-onojeghuo.jpg" />
+    <Content Include="Images\images\low\ky1x3qwntpk-simon-matzinger.jpg" />
+    <Content Include="Images\images\low\larm-rmah-216854.jpg" />
+    <Content Include="Images\images\low\lhtqjazuprq-breather.jpg" />
+    <Content Include="Images\images\low\lolsb7m6xku-semenov-ivan.jpg" />
+    <Content Include="Images\images\low\luca-bravo-210213.jpg" />
+    <Content Include="Images\images\low\lydia-harper-252217.jpg" />
+    <Content Include="Images\images\low\lydia-harper-252225.jpg" />
+    <Content Include="Images\images\low\maarten-deckers-227224.jpg" />
+    <Content Include="Images\images\low\macbook.png" />
+    <Content Include="Images\images\low\maket.png" />
+    <Content Include="Images\images\low\man-gray.png" />
+    <Content Include="Images\images\low\marvin-meyer-242794.jpg" />
+    <Content Include="Images\images\low\matt-cannon-248655.jpg" />
+    <Content Include="Images\images\low\matthew-brodeur-215027.jpg" />
+    <Content Include="Images\images\low\matthew-henry-173673.jpg" />
+    <Content Include="Images\images\low\max-kramer-216296.jpg" />
+    <Content Include="Images\images\low\mayra-carreno-62387.jpg" />
+    <Content Include="Images\images\low\michael-browning-14090.jpg" />
+    <Content Include="Images\images\low\michael-browning-227688.jpg" />
+    <Content Include="Images\images\low\michael-dam-257088.jpg" />
+    <Content Include="Images\images\low\mohamed-nohassi-242589.jpg" />
+    <Content Include="Images\images\low\mp0bgas_d1c-naomi-hebert.jpg" />
+    <Content Include="Images\images\low\muhammad-raufan-yusup-257289.jpg" />
+    <Content Include="Images\images\low\ndwjflxfsn4-billy-chester.jpg" />
+    <Content Include="Images\images\low\nik-macmillan-151041.jpg" />
+    <Content Include="Images\images\low\nnjzglwhjho-atikh-bana.jpg" />
+    <Content Include="Images\images\low\nordwood-themes-180852.jpg" />
+    <Content Include="Images\images\low\nvj-pdu98wu-aidan-meyer.jpg" />
+    <Content Include="Images\images\low\nx-vision-243224.jpg" />
+    <Content Include="Images\images\low\o9vkzmu05l0-cole-hutson.jpg" />
+    <Content Include="Images\images\low\octavian-rosca-216455.jpg" />
+    <Content Include="Images\images\low\oipwvziap0o-jakob-owens.jpg" />
+    <Content Include="Images\images\low\oliver-cole-236264 %281%29.jpg" />
+    <Content Include="Images\images\low\oqtl_mhd2ik-patrick-baum.jpg" />
+    <Content Include="Images\images\low\pablo-heimplatz-243286.jpg" />
+    <Content Include="Images\images\low\pablo-heimplatz-243301.jpg" />
+    <Content Include="Images\images\low\park-troopers-221403.jpg" />
+    <Content Include="Images\images\low\paulette-wooten-223048.jpg" />
+    <Content Include="Images\images\low\peter-winckler-244451.jpg" />
+    <Content Include="Images\images\low\pexels-photo-310419.jpeg" />
+    <Content Include="Images\images\low\phigyugqpvu-bruno-nascimento.jpg" />
+    <Content Include="Images\images\low\ql-qrylmd0y-seth-doyle.jpg" />
+    <Content Include="Images\images\low\qnpesem_t4i-lee-campbell.jpg" />
+    <Content Include="Images\images\low\qxcqkbf7tuc-jean-pierre-brungs.jpg" />
+    <Content Include="Images\images\low\rawpixel-com-247358.jpg" />
+    <Content Include="Images\images\low\rawpixel-com-252127.jpg" />
+    <Content Include="Images\images\low\ricardo-gomez-angel-255073.jpg" />
+    <Content Include="Images\images\low\rju_xd3tgyc-breather.jpg" />
+    <Content Include="Images\images\low\rktkn-111844.jpg" />
+    <Content Include="Images\images\low\roman-bozhko-251947.jpg" />
+    <Content Include="Images\images\low\roman-kraft-197672.jpg" />
+    <Content Include="Images\images\low\ross-sokolovski-209827.jpg" />
+    <Content Include="Images\images\low\rushio.png" />
+    <Content Include="Images\images\low\ruthson-zimmerman-233520 %281%29.jpg" />
+    <Content Include="Images\images\low\r_-m00daj2y-chelsea-ferenando.jpg" />
+    <Content Include="Images\images\low\samuel-fyfe-251960.jpg" />
+    <Content Include="Images\images\low\sandro-katalina-219649.jpg" />
+    <Content Include="Images\images\low\sarah-dorweiler-105892.jpg" />
+    <Content Include="Images\images\low\scott-webb-193068.jpg" />
+    <Content Include="Images\images\low\sean-afnan-244576.jpg" />
+    <Content Include="Images\images\low\sergey-pesterev-223092.jpg" />
+    <Content Include="Images\images\low\slxbemvneqi-meiying-ng.jpg" />
+    <Content Include="Images\images\low\spencer-kaff-240377.jpg" />
+    <Content Include="Images\images\low\stil-243522.jpg" />
+    <Content Include="Images\images\low\stil-243534.jpg" />
+    <Content Include="Images\images\low\StockSnap_0C4LLJWEEU.jpg" />
+    <Content Include="Images\images\low\StockSnap_0J308RAF8H.jpg" />
+    <Content Include="Images\images\low\StockSnap_1LW59GG0WK.jpg" />
+    <Content Include="Images\images\low\StockSnap_73EV0ODLNO.jpg" />
+    <Content Include="Images\images\low\StockSnap_8WBXU5EZF1.jpg" />
+    <Content Include="Images\images\low\StockSnap_ESWYC8C34O.jpg" />
+    <Content Include="Images\images\low\StockSnap_FEEDD7P7H2.jpg" />
+    <Content Include="Images\images\low\StockSnap_G47QDAYCTO.jpg" />
+    <Content Include="Images\images\low\StockSnap_K9Y044YEMY.jpg" />
+    <Content Include="Images\images\low\StockSnap_LEY5GM8R4U.jpg" />
+    <Content Include="Images\images\low\StockSnap_MSISRLA1IU.jpg" />
+    <Content Include="Images\images\low\StockSnap_RQ2JLHTFHD.jpg" />
+    <Content Include="Images\images\low\swbzwmuutjm-crew.jpg" />
+    <Content Include="Images\images\low\tev1676vwja-ron-sartini.jpg" />
+    <Content Include="Images\images\low\tg36rvceqng-rob-bye.jpg" />
+    <Content Include="Images\images\low\the-5th-141680.jpg" />
+    <Content Include="Images\images\low\tim-mossholder-244857.jpg" />
+    <Content Include="Images\images\low\toa-heftiba-134565.jpg" />
+    <Content Include="Images\images\low\toa-heftiba-257395.jpg" />
+    <Content Include="Images\images\low\tommy-lisbin-252905.jpg" />
+    <Content Include="Images\images\low\tpkqwyhy8q4-aneta-ivanova.jpg" />
+    <Content Include="Images\images\low\tpv9dh822va-stefan-stefancik.jpg" />
+    <Content Include="Images\images\low\u2ymajzuqfk-tamara-bellis.jpg" />
+    <Content Include="Images\images\low\ubixxuy7fg0-nick-nice.jpg" />
+    <Content Include="Images\images\low\uj8lnvcbjfq-seth-doyle.jpg" />
+    <Content Include="Images\images\low\usc6z5ajevm-richie-lugo.jpg" />
+    <Content Include="Images\images\low\verena-yunita-yapi-253388.jpg" />
+    <Content Include="Images\images\low\vitaliy-paykov-212215.jpg" />
+    <Content Include="Images\images\low\vladislav-klapin-221352.jpg" />
+    <Content Include="Images\images\low\voxdu8gis6g-breather.jpg" />
+    <Content Include="Images\images\low\vr_fijvnqcy-inna-lesyk.jpg" />
+    <Content Include="Images\images\low\w4ruhiw3pd0-andrew-coelho.jpg" />
+    <Content Include="Images\images\low\w5ybfiiuauo-ambreen-hasan.jpg" />
+    <Content Include="Images\images\low\weyamle9fdm-ashim-d-silva.jpg" />
+    <Content Include="Images\images\low\wfk8olclc7k-christos-barbalis.jpg" />
+    <Content Include="Images\images\low\wi5pncoffn4-priscilla-flores.jpg" />
+    <Content Include="Images\images\low\william-stitt-111010.jpg" />
+    <Content Include="Images\images\low\willspirit-sbln-226116.jpg" />
+    <Content Include="Images\images\low\wteo1tlenqw-jeremy-bishop.jpg" />
+    <Content Include="Images\images\low\xgt3iqdiiju-elijah-henderson.jpg" />
+    <Content Include="Images\images\low\xi9d8yslno4-rawpixel-com.jpg" />
+    <Content Include="Images\images\low\xyvoh2ng_3k-braden-barwich.jpg" />
+    <Content Include="Images\images\low\yingchou-han-241463.jpg" />
+    <Content Include="Images\images\low\y_jdydxopi0-breather.jpg" />
+    <Content Include="Images\images\low\z1l6vcqlzgc-nick-karvounis.jpg" />
+    <Content Include="Images\images\low\zhp6jnixtfq-jez-timms.jpg" />
+    <Content Include="Images\images\low\zkpiplfdia0-chloe-smith.jpg" />
+    <Content Include="Images\images\low\zlzlx5szccs-brigitta-schneiter.jpg" />
+    <Content Include="Images\images\people\6anudmpilw4-foto-sushi.jpg" />
+    <Content Include="Images\images\people\fn_bt9fwg_e-joe-gardner.jpg" />
+    <Content Include="Images\images\people\gkf6_gndsum-christopher-campbell.jpg" />
+    <Content Include="Images\images\people\iegyacy101s-angello-lopez.jpg" />
+    <Content Include="Images\images\rushdoc.png" />
+    <Content Include="Images\images\smallogo--black.png" />
+    <Content Include="Images\images\works\blog-home-boxed-fluid.png" />
+    <Content Include="Images\images\works\blog-home-boxed.png" />
+    <Content Include="Images\images\works\blog-home-column-2.png" />
+    <Content Include="Images\images\works\blog-home-column.png" />
+    <Content Include="Images\images\works\blog-home-default.png" />
+    <Content Include="Images\images\works\blog-home-fluid.png" />
+    <Content Include="Images\images\works\blog-home-masonry.png" />
+    <Content Include="Images\images\works\blog-post-1.png" />
+    <Content Include="Images\images\works\blog-post-2.png" />
+    <Content Include="Images\images\works\blog-post-3.png" />
+    <Content Include="Images\images\works\blog-post-4.png" />
+    <Content Include="Images\images\works\blog-post-5.png" />
+    <Content Include="Images\images\works\blog-post-6.png" />
+    <Content Include="Images\images\works\blog-post-7.png" />
+    <Content Include="Images\images\works\company-2.png" />
+    <Content Include="Images\images\works\company-3.png" />
+    <Content Include="Images\images\works\company-4.png" />
+    <Content Include="Images\images\works\company-5.png" />
+    <Content Include="Images\images\works\company.png" />
+    <Content Include="Images\images\works\home-architecture.png" />
+    <Content Include="Images\images\works\home-brand.png" />
+    <Content Include="Images\images\works\home-company-6.png" />
+    <Content Include="Images\images\works\home-dubai-rtl.png" />
+    <Content Include="Images\images\works\home-sport.png" />
+    <Content Include="Images\images\works\home-studio-2.png" />
+    <Content Include="Images\images\works\landing-app-2.png" />
+    <Content Include="Images\images\works\landing-app-3.png" />
+    <Content Include="Images\images\works\landing-app-4.png" />
+    <Content Include="Images\images\works\landing-app.png" />
+    <Content Include="Images\images\works\landing-company-2.png" />
+    <Content Include="Images\images\works\landing-company-3.png" />
+    <Content Include="Images\images\works\landing-company.png" />
+    <Content Include="Images\images\works\landing-service-2.png" />
+    <Content Include="Images\images\works\landing-service.png" />
+    <Content Include="Images\images\works\landing-sport.png" />
+    <Content Include="Images\images\works\landing-studio.png" />
+    <Content Include="Images\images\works\landing-travel-2.png" />
+    <Content Include="Images\images\works\landing-travel.png" />
+    <Content Include="Images\images\works\other.png" />
+    <Content Include="Images\images\works\page-article-2.png" />
+    <Content Include="Images\images\works\page-article-3.png" />
+    <Content Include="Images\images\works\page-article-4.png" />
+    <Content Include="Images\images\works\page-article.png" />
+    <Content Include="Images\images\works\page-contact-us-2.png" />
+    <Content Include="Images\images\works\page-contact-us-3.png" />
+    <Content Include="Images\images\works\page-contact-us-4.png" />
+    <Content Include="Images\images\works\page-contact-us.png" />
+    <Content Include="Images\images\works\page-faq.png" />
+    <Content Include="Images\images\works\page-history.png" />
+    <Content Include="Images\images\works\page-our-company.png" />
+    <Content Include="Images\images\works\page-price-2.png" />
+    <Content Include="Images\images\works\page-price.png" />
+    <Content Include="Images\images\works\page-support.png" />
+    <Content Include="Images\images\works\photographer-dark.png" />
+    <Content Include="Images\images\works\photographer-white.png" />
+    <Content Include="Images\images\works\portfolio-boxed-1.png" />
+    <Content Include="Images\images\works\portfolio-boxed-2.png" />
+    <Content Include="Images\images\works\portfolio-boxed-3.png" />
+    <Content Include="Images\images\works\portfolio-dark.png" />
+    <Content Include="Images\images\works\portfolio-default-1.png" />
+    <Content Include="Images\images\works\portfolio-default-2.png" />
+    <Content Include="Images\images\works\portfolio-default-3.png" />
+    <Content Include="Images\images\works\portfolio-fluid-big.png" />
+    <Content Include="Images\images\works\portfolio-fluid-grid-with-sidebar.png" />
+    <Content Include="Images\images\works\portfolio-fluid-grid.png" />
+    <Content Include="Images\images\works\portfolio-fluid.png" />
+    <Content Include="Images\images\works\portfolio-fullscreen.png" />
+    <Content Include="Images\images\works\portfolio-hover-1.png" />
+    <Content Include="Images\images\works\portfolio-hover-2.png" />
+    <Content Include="Images\images\works\portfolio-hover-3.png" />
+    <Content Include="Images\images\works\portfolio-project-boxed.png" />
+    <Content Include="Images\images\works\portfolio-project-default.png" />
+    <Content Include="Images\images\works\portfolio-project-sidebar-2.png" />
+    <Content Include="Images\images\works\portfolio-project-sidebar.png" />
+    <Content Include="Images\images\works\portfolio-white.png" />
+    <Content Include="Images\images\works\restaurant.png" />
+    <Content Include="Images\images\works\resume-dark.png" />
+    <Content Include="Images\images\works\shop-card-default.png" />
+    <Content Include="Images\images\works\shop-card-detail.png" />
+    <Content Include="Images\images\works\shop-cart-payment.png" />
+    <Content Include="Images\images\works\shop-cart-shipping.png" />
+    <Content Include="Images\images\works\shop-cart-success.png" />
+    <Content Include="Images\images\works\shop-cart.png" />
+    <Content Include="Images\images\works\shop-catalog-boxed-2-minimal.png" />
+    <Content Include="Images\images\works\shop-catalog-boxed-2-sidebar.png" />
+    <Content Include="Images\images\works\shop-catalog-boxed-3-sidebar.png" />
+    <Content Include="Images\images\works\shop-catalog-boxed-3.png" />
+    <Content Include="Images\images\works\shop-catalog-boxed-4.png" />
+    <Content Include="Images\images\works\shop-catalog-default-2-minimal.png" />
+    <Content Include="Images\images\works\shop-catalog-default-2-sidebar.png" />
+    <Content Include="Images\images\works\shop-catalog-default-3-sidebar.png" />
+    <Content Include="Images\images\works\shop-catalog-default-3.png" />
+    <Content Include="Images\images\works\shop-catalog-default-4.png" />
+    <Content Include="Images\images\works\shop-main-2.png" />
+    <Content Include="Images\images\works\shop-main-3.png" />
+    <Content Include="Images\images\works\shop-main.png" />
+    <Content Include="Images\images\works\specialty-404.png" />
+    <Content Include="Images\images\works\specialty-account.png" />
+    <Content Include="Images\images\works\specialty-comingsoon-background.png" />
+    <Content Include="Images\images\works\specialty-comingsoon.png" />
+    <Content Include="Images\images\works\specialty-create.png" />
+    <Content Include="Images\images\works\specialty-login.png" />
+    <Content Include="Images\images\works\specialty-recover.png" />
+    <Content Include="Images\images\works\specialty-search-results.png" />
+    <Content Include="Images\images\works\specialty-service.png" />
+    <Content Include="Images\images\works\studio.png" />
+    <Content Include="Images\images\works\travel.png" />
+    <Content Include="Images\images\works\video-dark.png" />
+    <Content Include="Images\Mango.jpg" />
+    <Content Include="Images\Orange.jpg" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Home\Fruit.cshtml" />
+    <Content Include="Views\Home\Main.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\images\other\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807091105082_dpttable.resx">
+      <DependentUpon>201807091105082_dpttable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251040553_fruit.resx">
+      <DependentUpon>201807251040553_fruit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251050324_dropimage.resx">
+      <DependentUpon>201807251050324_dropimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251236209_addimage.resx">
+      <DependentUpon>201807251236209_addimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251243403_adddatatype.resx">
+      <DependentUpon>201807251243403_adddatatype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807261446289_abc.resx">
+      <DependentUpon>201807261446289_abc.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59336/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

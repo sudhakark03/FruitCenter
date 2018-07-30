@@ -1,0 +1,78 @@
+﻿@model Demo.USER
+
+@{
+    ViewBag.Title = "Register";
+}
+<body id="reg1"><h2>Register</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>USER</legend>
+        @Html.AntiForgeryToken()
+        @if (ViewBag.Message != null)
+        {
+            <div style="border:solid 1px green">
+                </div>
+        }
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Username)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Username)
+            @Html.ValidationMessageFor(model => model.Username)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ConfirmPassword)
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FullName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FullName)
+            @Html.ValidationMessageFor(model => model.FullName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailID)
+            @Html.ValidationMessageFor(model => model.EmailID)
+        </div>
+
+        <p>
+            <input id= "myinput" type="submit" onclick="fun();" value="Create" />
+        </p>
+    </fieldset>
+}
+    <script>
+        function fun() {
+            document.getElementById("myinput");
+            alert("Successfully submitted");
+        }
+    </script>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+    </body>

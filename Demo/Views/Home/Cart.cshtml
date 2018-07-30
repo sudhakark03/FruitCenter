@@ -1,0 +1,56 @@
+﻿
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+
+
+@model IEnumerable<Demo.Models.Fruit>
+<h3>Welcome</h3>
+
+    <table>
+
+@foreach(var fruit in @Model)
+{
+   <tr id="@fruit.Id">
+      <td>@fruit.Id</td> 
+       
+    <td>@fruit.F_Name</td>
+   
+    <td>₹@fruit.Price</td>
+       
+     
+      
+       <td><img src="data:image/jpeg;base64,@fruit.Image" width="100" height="100"></td>
+     
+
+    
+   </tr> 
+
+}
+        </table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        var fruitids = localStorage.getItem("fruitids");
+        console.log(fruitids);
+        $("table tbody tr").each(function () {
+            var fruitid = $(this).attr('id');
+            if (fruitids.indexOf(fruitid) > -1) {
+                $(this).show();
+                console.log("if cond");
+            }
+            else {
+                $(this).hide();
+                console.log("ifelse cond");
+            }
+
+            console.log(fruitid);
+
+        });
+        localStorage.setItem("fruitids","");
+     });
+</script>

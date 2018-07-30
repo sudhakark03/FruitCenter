@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+ <body>
+   <header>
+
+    <div class="jumbotron">
+        <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+       <div class="pull-right">
+                        <div class="mydemo">
+                            <div class="contactInformation">
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                    </dt>
+                                    <dd style="font-family:'Times New Roman'">
+                                       
+                                        <p>Chennai</p>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <i  class="fa fa-phone" style="color:green"></i>
+                                    </dt>
+                                    <dd>
+                                      <h5>  <a href="tel:12155834456">1(215) 583 4456</h5></a>
+                                    </dd>
+                                </dl>
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </dt>
+                                    <dd>
+                                       <h5> <a href="https://www.fruitcentermarketplace.com/learn/departments/">www.fruitcenter.com></a></h5>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+    
+        </div>
+     @RenderBody()
+            @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+       </header>
+</body>
+</html>

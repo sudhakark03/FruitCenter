@@ -1,0 +1,183 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+  
+}
+@model IEnumerable<List<Demo.Models.Fruit>>
+<!DOCTYPE html>
+
+ <html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Fruit Cart</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   <meta name="robots" content="all"/>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta property="og:image" content="http://placehold.it/100x100" />
+   <meta property="og:title" content="" />
+   <meta property="og:description" content="" /> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
+    <link href="~/Content/css/ico/pixedenico/Pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="~/Content/css/ico/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/js/arcticmodal/jquery.arcticmodal-0.3.css" rel="stylesheet" />
+    <link href="~/Content/css/main/animate.css" rel="stylesheet" />
+    
+    <link href="~/Content/css/main/style.css" rel="stylesheet" />
+    <link href="~/Content/css/typography/OpenSans.css" rel="stylesheet" />
+    <link href="~/Content/css/main/theme-main.css" rel="stylesheet" />
+    <link href="~/Content/css/user.css" rel="stylesheet" />
+  
+</head>
+<body id="body">
+    <div>
+        <section class="bg-color--white-2 padding-null bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
+				<h2><span style="color:blue">Fruit Center</span></h2>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12 text-right text-left-xs">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+				<a style="color:green" href="mail:">www.fruitcenter.com</a>
+                <i  class="fa fa-phone" style="color:green"></i>
+				<a style="color:green" href="tel:" class="text--nowrap">725-637-5464</a>
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+				<a style="color:green" href="#" class="text--nowrap">Chennai<a></a>
+			</div>
+		</div>
+	</div>
+	</section>
+	<nav class="hr bg-color--white-2">
+		<div class="container">
+
+			<div class="row row--nav row--nav--baseline">
+				
+				
+				<div class="nav-mod-group right left-xs left-sm left-xs">
+
+                    <div class="nav-mod search hidden-xs">
+                        <div id="reg">
+                            Register</div>
+                        
+                    </div>
+                    <div class="nav-mod search hidden-xs">
+					 <div class="register">Login</div>
+                   </div>
+					
+					<div class="nav-mod  dropdown dropdown--right dropdown--toggle-on-click dropdown--left-sm">
+						<div id="ex4">
+ <a href="~/Home/Cart"><span class="p1 fa-stack fa-2x has-badge" data-count="0">
+  <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
+   <i class="p3 fa fa-shopping-cart fa-stack-1x xfa-inverse" data-count="4b"></i>
+  </span></a> 
+</div>
+						<div class="dropdown__content dropdown__content--2 bg-color--white">
+								<div class="row hr">
+									<div class="col-md-3 col-sm-3 col-xs-3 text-center">
+										<img alt="" src="images/items/thumb-item%234.png" height="40">
+									</div>
+									<div class="col-md-8 col-sm-8 col-xs-8">
+										<b class="text--uppercase">Bag<span class="right">4</span></b>
+										<p class="p-xs marg-null">Gray, Orange</p>
+									</div>
+									<div class="col-md-1 col-sm-1 col-xs-1 text-right">
+										<i class="material-icons ico-xs">&#xE14C;</i>
+									</div>
+								</div>
+								<div class="row hr">
+									<div class="col-md-3 col-sm-3 col-xs-3 text-center">
+										<img alt="" src="images/items/thumb-item%237.png" height="40">
+									</div>
+									<div class="col-md-8 col-sm-8 col-xs-8">
+										<b class="text--uppercase">Sport bag<span class="right">1</span></b>
+										<p class="p-xs marg-null">Black, Orange</p>
+									</div>
+									<div class="col-md-1 col-sm-1 col-xs-1 text-right">
+										<i class="material-icons ico-xs">&#xE14C;</i>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<a href="#" class="btn btn-md btn--line">Cart</a>
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<b class="price__label">CART TOTAL</b><br>
+										<span class="price price-xs">2.000$</span>
+									</div>
+								</div>
+							</div>
+					</div>
+					<div data-include="mod-buttons"></div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var fruitids = [];
+
+      $('#reg').click(function (e)      {
+          location.href = '@Url.Content("~/User/Register/")';
+      });
+        $('.addcart').click(function (e) {
+            console.log("somthing add");
+            var dcount = $('#ex4 span').attr('data-count');
+            $('#ex4 span').attr('data-count',parseInt( dcount)+1);
+            var id = $(this).attr("fruitid");
+            fruitids.push(id);
+            console.log(fruitids);
+            localStorage.setItem("fruitids", fruitids);
+        });
+    });
+</script>
+   
+</body>
+</html>
+<h3>Welcome</h3>
+<div class="container">
+    
+@foreach(var flist in @Model)
+{
+    <div class="row">
+      
+    <div class="col-md-4 col-sm-4" style="background-color:lavender;">
+        <span>@flist[0].Id</span>
+        <span>@flist[0].F_Name</span>
+        <span>₹@flist[0].Price</span>
+        <img src="data:image/jpeg;base64,@flist[0].Image" width="100" height="100">
+        <input type="button" class="addcart" value=" Add Cart" fruitid="@flist[0].Id"/>
+    </div>
+    <div class="col-md-4 col-sm-4" style="background-color:lavenderblush;">
+        @flist[1].Id
+        @flist[1].F_Name
+        ₹@flist[1].Price
+        <img src="data:image/jpeg;base64,@flist[1].Image" width="100" height="100">
+        <input type="button" class="addcart" value=" Add Cart" fruitid="@flist[1].Id"/>
+    </div>
+    <div class="col-md-4 col-sm-4" style="background-color:lavender;">
+                @flist[2].Id
+        @flist[2].F_Name
+        ₹@flist[2].Price
+        <img src="data:image/jpeg;base64,@flist[2].Image" width="100" height="100">
+        <input type="button" class="addcart" value=" Add Cart" fruitid="@*@flist[2s].Id*@"/>
+    </div>
+  
+          </div>
+
+}
+      
+    </div>

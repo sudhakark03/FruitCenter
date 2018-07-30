@@ -1,0 +1,78 @@
+﻿.form-group .control-label:after {
+  content:"  *";
+  color:red;
+}
+.mydemo {
+    float: left;
+    display: table;
+    padding-right: 8px;
+    padding-left: 8px;
+    line-height: 26px;
+}
+.contactInformation {
+    float: left;
+}
+
+    .contactInformation dl {
+        margin: 0;
+        padding: 0;
+        float: left;
+        width: auto;
+        margin-right: 25px;
+        margin-top: 10px;
+    }
+
+    .contactInformation dt {
+        float: left;
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        clear: left;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .contactInformation i {
+        font-size: 24px;
+        line-height: 30px;
+        float: right;
+        color: #537692;
+    }
+
+    .contactInformation dd {
+        margin-left: 60px;
+        margin-top: 0px;
+    }
+
+    .contactInformation span {
+        line-height: 25px;
+    }
+
+    .contactInformation p {
+        margin-bottom: 0;
+    }
+
+    .contactInformation span, .contactInformation p {
+        color: #777;
+    }
+
+.dl-horizontal:before, .dl-horizontal:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.contactUs article {
+    background: url(../images/contactus-banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    height: 500px;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
