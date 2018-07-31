@@ -1,0 +1,62 @@
+﻿
+     
+ 
+<!DOCTYPE html>
+<html style="background-color:lightblue">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Layout.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="header">
+        <a href="#default" class="logo"><h2> Healthy Fruit Center</h2></a>
+        <div class="header-right">
+        <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
+	    <a style="color:green" href="https://www.yelp.com/biz/fruit-center-marketplace-hingham"><ul><i class="fa fa-envelope-o" aria-hidden="true"></i>www.fruitcenter.com</ul></a>
+         <!--  <i  class="fa fa-phone" style="color:green"></i>-->
+				<a style="color:green" href="tel:" class="text--nowrap"><ul><i  class="fa fa-phone" style="color:green"></i>+919494142717</ul></a>
+                <!--    <i class="fa fa-location-arrow" aria-hidden="true"></i>-->
+				<a style="color:green" href="https://www.google.co.in/search?q=chennai&rlz=1C1CHBF_enIN806IN806&tbm=isch&source=lnms&sa=X&ved=0ahUKEwjeqpmx6cjcAhUBPo8KHefWCUAQ_AUIDCgD&biw=1366&bih=662&dpr=1" class="text--nowrap"><ul><i class="fa fa-location-arrow" aria-hidden="true"></i>Chennai</ul></a>
+                 <a id="hidemore" style="color:blue" href="~/Home1/Index" class="text--nowrap"><ul><u>Order More Fruits</u></ul></a>
+                <div id="ex4">
+                     <a href="~/Home1/Cart"><span class="p1 fa-stack fa-2x has-badge" data-count="0">
+                     <!--<i class="p2 fa fa-circle fa-stack-2x"></i>-->
+                     <i class="p3 fa fa-shopping-cart fa-stack-1x xfa-inverse" data-count="4b"></i>
+                     </span></a> 
+                  
+                  </div>
+                    
+               </div>
+            
+        </div>
+   <h2> <div id="reglog" style="width:auto; background-color:aqua">  
+        @if (Request.IsAuthenticated)  
+        {  
+            <strong>@Html.Encode(User.Identity.Name)</strong>  
+            @Html.ActionLink("Log Out", "Logout", "Registration")  
+        }  
+        
+</div> </h2>
+    @RenderBody()
+    <div class="footer">
+    <marquee><h2>Fruit Center</h2></marquee>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("#hidemore").hide();
+         });
+         </script>
+   
+</body>
+</html>
